@@ -6,11 +6,16 @@ import { Stack } from "@mui/material";
 export default function Navbar() {
   return (
     <>
-      <Stack  direction={"row"} justifyContent={"space-around"} sx={{}}>
+      <Stack
+        direction={"row"}
+        justifyContent={"space-around"}
+        py={2}
+        sx={{ background: `white` }}
+      >
         <Logo />
         <Stack direction={"row"} gap={2} alignItems={"center"}>
-        <Btn />
-        <Translate />
+          <Btn />
+          <Translate />
         </Stack>
       </Stack>
     </>
