@@ -12,7 +12,7 @@ export default function Navbar() {
         py={2}
         sx={{ background: `white` }}
       >
-        {/* <Logo /> */}
+        <Logo />
         <Stack direction={"row"} gap={2} alignItems={"center"}>
           <Btn />
           <Translate />
