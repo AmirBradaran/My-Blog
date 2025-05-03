@@ -1,5 +1,6 @@
 import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import React from "react";
+import Sites from "./Sites";
 export default function Portfolio() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -39,7 +40,7 @@ export default function Portfolio() {
           some projects of UI/Ux design and also front-end sites .
         </Typography>
       </Stack>
-      
+      <Sites/>
     </Stack>
   );
 }

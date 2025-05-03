@@ -6,6 +6,7 @@ import { Box, Stack } from "@mui/material";
 import WorkProcess from "./Pages/WorkProcess";
 import Portfolio from "./Pages/Portfolio";
 import Questions from "./Pages/Questions";
+import Idea from "./Pages/HaveProject";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Home />
         <WorkProcess />
         <Portfolio />
+        <Idea/>
         <Questions/>
       </Stack>
       <Footer />
