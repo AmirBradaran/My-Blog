@@ -43,11 +43,19 @@ export default function Texts() {
         variant="contained"
         color="secondary"
         sx={{
-          width: { xs: "100%", sm: "115px" },
-          fontSize: "1rem",
+          width: "140px",
+          fontSize: "0.9rem",
+          fontWeight: "bold",
           textTransform: "none",
-          mt: { xs: 1, sm: 0 },
-          mx:{sm:"auto" , md:"0"}
+          "&:hover": {
+            backgroundColor: "purple",
+            boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+          },
+          mx: { xs: "auto", md: "0" },
+          borderRadius: "25px",
+          padding: "12px 30px",
+          boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+          transition: "all 0.3s ease",
         }}
       >
         My Project

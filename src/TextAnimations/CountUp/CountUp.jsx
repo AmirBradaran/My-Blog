@@ -46,14 +46,11 @@ export default function CountUp({
         motionValue.set(direction === "down" ? from : to);
       }, delay * 1000);
 
-      const durationTimeoutId = setTimeout(
-        () => {
-          if (typeof onEnd === "function") {
-            onEnd();
-          }
-        },
-        delay * 1000 + duration * 1000,
-      );
+      const durationTimeoutId = setTimeout(() => {
+        if (typeof onEnd === "function") {
+          onEnd();
+        }
+      }, delay * 1000 + duration * 1000);
 
       return () => {
         clearTimeout(timeoutId);
@@ -84,7 +81,7 @@ export default function CountUp({
         };
 
         const formattedNumber = Intl.NumberFormat("en-US", options).format(
-          latest.toFixed(0),
+          latest.toFixed(0)
         );
 
         ref.current.textContent = separator
@@ -98,16 +95,16 @@ export default function CountUp({
 
   return (
     <>
-    <span
-      className={`${className}`}
-      ref={ref}
-      style={{
-        padding: "5px 10px", 
-        borderRadius: "5px",
-        fontSize:"2rem",
-        fontWeight:"bold"
-      }}
-    />
+      <span
+        className={`${className}`}
+        ref={ref}
+        style={{
+          padding: "5px 10px",
+          borderRadius: "5px",
+          fontSize: "2rem",
+          fontWeight: "bold",
+        }}
+      />
     </>
   );
 }

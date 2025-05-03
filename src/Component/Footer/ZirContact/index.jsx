@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function QuestCard() {
+export default function ZirContact() {
   return (
     <div>
       

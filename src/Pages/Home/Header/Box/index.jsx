@@ -1,6 +1,7 @@
 import React from "react";
 import CountUp from "../../../../TextAnimations/CountUp/CountUp";
-import { Stack, Typography, useTheme, useMediaQuery } from "@mui/material";
+import { Stack, Typography, useTheme, useMediaQuery, Box as MuiBox } from "@mui/material";
+import { CheckCircle, People, Work } from "@mui/icons-material"; // آیکون‌ها
 
 export default function Box() {
   const theme = useTheme();
@@ -10,23 +11,32 @@ export default function Box() {
   return (
     <Stack
       direction={"row"}
-      gap={isSmallScreen ? 2 : isMediumScreen ? 3 : 5}
+      gap={isSmallScreen ? 1 : isMediumScreen ? 2 : 3}
       flexWrap={isSmallScreen ? "wrap" : "nowrap"}
       justifyContent="center"
     >
-      <Stack
-        direction={"column"}
-        alignItems={"center"}
-        p={isSmallScreen ? 1 : 2}
-        borderRadius={4}
+      {/* Box for Experience */}
+      <MuiBox
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        p={isSmallScreen ? 0.5 : 1}
+        borderRadius={3}
+        color="white"
         sx={{
-          backgroundColor: "#EDD8FF",
-          boxShadow: "-4px 3px 5px #00000050",
-          width: isSmallScreen ? "45%" : "auto",
-          minWidth: isSmallScreen ? 0 : 120,
-          mb: isSmallScreen ? 2 : 0,
+          backgroundColor: "#2EA98C", // Green
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
+          width: isSmallScreen ? "40%" : "auto",
+          minWidth: isSmallScreen ? 90 : 100,
+          mb: isSmallScreen ? 1 : 0,
+          transition: "transform 0.3s ease, box-shadow 0.3s ease",
+          "&:hover": {
+            transform: "scale(1.05)",
+            boxShadow: "0 8px 15px rgba(0, 0, 0, 0.4)",
+          },
         }}
       >
+        <CheckCircle sx={{ fontSize: 40 }} />
         <CountUp
           from={0}
           to={1}
@@ -35,24 +45,33 @@ export default function Box() {
           duration={1}
           className="count-up-text"
         />
-        <Typography variant={isSmallScreen ? "body2" : "body1"}>
+        <Typography variant={isSmallScreen ? "body2" : "body1"} sx={{ fontWeight: "bold", mt: 1 }}>
           Experience
         </Typography>
-      </Stack>
-      
-      <Stack
-        direction={"column"}
-        alignItems={"center"}
-        p={isSmallScreen ? 1 : 2}
-        borderRadius={4}
+      </MuiBox>
+
+      {/* Box for Project Completed */}
+      <MuiBox
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        p={isSmallScreen ? 0.5 : 1}
+        borderRadius={3}
+        color="white"
         sx={{
-          backgroundColor: "#EDD8FF",
-          boxShadow: "-4px 3px 5px #00000050",
-          width: isSmallScreen ? "45%" : "auto",
-          minWidth: isSmallScreen ? 0 : 120,
-          mb: isSmallScreen ? 2 : 0,
+          backgroundColor: "#FF7043", // Orange
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
+          width: isSmallScreen ? "40%" : "auto",
+          minWidth: isSmallScreen ? 90 : 100,
+          mb: isSmallScreen ? 1 : 0,
+          transition: "transform 0.3s ease, box-shadow 0.3s ease",
+          "&:hover": {
+            transform: "scale(1.05)",
+            boxShadow: "0 8px 15px rgba(0, 0, 0, 0.4)",
+          },
         }}
       >
+        <Work sx={{ fontSize: 40 }} />
         <CountUp
           from={0}
           to={30}
@@ -61,23 +80,32 @@ export default function Box() {
           duration={1}
           className="count-up-text"
         />
-        <Typography variant={isSmallScreen ? "body2" : "body1"}>
+        <Typography variant={isSmallScreen ? "body2" : "body1"} sx={{ fontWeight: "bold", mt: 1 }}>
           Project Completed
         </Typography>
-      </Stack>
+      </MuiBox>
 
-      <Stack
-        direction={"column"}
-        alignItems={"center"}
-        p={isSmallScreen ? 1 : 2}
-        borderRadius={4}
+      {/* Box for Happy Client */}
+      <MuiBox
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        p={isSmallScreen ? 0.5 : 1}
+        borderRadius={3}
+        color="white"
         sx={{
-          backgroundColor: "#EDD8FF",
-          boxShadow: "-4px 3px 5px #00000050",
+          backgroundColor: "#7E57C2", // Purple
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
           width: isSmallScreen ? "50%" : "auto",
-          minWidth: isSmallScreen ? 0 : 120,
+          minWidth: isSmallScreen ? 90 : 100,
+          transition: "transform 0.3s ease, box-shadow 0.3s ease",
+          "&:hover": {
+            transform: "scale(1.05)",
+            boxShadow: "0 8px 15px rgba(0, 0, 0, 0.4)",
+          },
         }}
       >
+        <People sx={{ fontSize: 40 }} />
         <CountUp
           from={0}
           to={20}
@@ -86,10 +114,10 @@ export default function Box() {
           duration={1}
           className="count-up-text"
         />
-        <Typography variant={isSmallScreen ? "body2" : "body1"}>
+        <Typography variant={isSmallScreen ? "body2" : "body1"} sx={{ fontWeight: "bold", mt: 1 }}>
           Happy Client
         </Typography>
-      </Stack>
+      </MuiBox>
     </Stack>
   );
 }

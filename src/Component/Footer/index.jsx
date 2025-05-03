@@ -1,9 +1,9 @@
 import React from 'react'
-
+import ContactUs from './ContactUs'
 export default function Footer() {
   return (
-    <div>
-      
-    </div>
+    <>
+     <ContactUs/> 
+    </>
   )
 }

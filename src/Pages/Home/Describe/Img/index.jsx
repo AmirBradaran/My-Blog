@@ -8,7 +8,7 @@ export default function Img() {
       sx={{
         // border:"1px solid black",
         height: "400px",
-        width: { xs:"325px" , md:"400px"},
+        width: { xs:"325px" , md:"350px"},
         borderRadius: "20px",
         position: "relative",
         background:"#F0F1F3"

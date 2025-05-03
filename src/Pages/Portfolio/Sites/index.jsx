@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ProjectCard() {
+export default function Sites() {
   return (
     <div>
       
