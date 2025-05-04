@@ -1,10 +1,17 @@
 import React from "react";
 import { Stack, Typography, useTheme, useMediaQuery } from "@mui/material";
 import WorkProcessList from "./WorkProcessList/index";
+import { useLanguage } from "../../Utils/LanguageContext "; // فرض بر این‌که استفاده می‌کنی
 
 export default function WorkProcess() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const { language } = useLanguage();
+
+  const titles = {
+    en: "Work Process",
+    fa: "فرآیند کاری",
+  };
 
   return (
     <Stack
@@ -28,6 +35,7 @@ export default function WorkProcess() {
       <Typography
         variant="h4"
         component="h2"
+        fontFamily={titles.fa ? "Iran" : "Arial"}
         sx={{
           textAlign: "center",
           fontWeight: 700,
@@ -35,7 +43,7 @@ export default function WorkProcess() {
           color: theme.palette.grey[900],
         }}
       >
-        Work Process
+        {titles[language]}
       </Typography>
 
       <WorkProcessList />

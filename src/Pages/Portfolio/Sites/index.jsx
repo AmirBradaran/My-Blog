@@ -15,55 +15,98 @@ import digitalShop from "../../../assets/figma(1).jpg";
 import electroShop from "../../../assets/electro.png";
 import loginForm from "../../../assets/login-form-sofa.jpg";
 import Blog from "../../../assets/Blog-Mine.jpg";
+import { useLanguage } from "../../../Utils/LanguageContext "; // فرض بر این‌که استفاده می‌کنی
 
-const data = [
-  {
-    image: res,
-    title: "Restaurant and Cafe Design Project",
-    description:
-      "This project is created to showcase my visual design skills in the restaurant and cafe industry.",
-  },
-  {
-    image: motor,
-    title: "Motor Layout",
-    description:
-      "A modern Motor design focused on user experience and interior aesthetics.",
-  },
-  {
-    image: digitalShop,
-    title: "digitalShop Layout",
-    description:
-      "A modern digitalShop design focused on user experience and interior aesthetics.",
-  },
-  {
-    image: electroShop,
-    title: "ElectroShop Layout",
-    description:
-      "A modern ElectroShop design focused on user experience and interior aesthetics.",
-  },
-  {
-    image: loginForm,
-    title: "LoginForm Layout",
-    description:
-      "A modern LoginForm design focused on user experience and interior aesthetics.",
-  },
-  {
-    image: Blog,
-    title: "Blog Layout",
-    description:
-      "A modern Blog design focused on user experience and interior aesthetics.",
-  },
-];
+const data = {
+  en: [
+    {
+      image: res,
+      title: "Restaurant and Cafe Design Project",
+      description:
+        "This project is created to showcase my visual design skills in the restaurant and cafe industry.",
+    },
+    {
+      image: motor,
+      title: "Motor Layout",
+      description:
+        "A modern Motor design focused on user experience and interior aesthetics.",
+    },
+    {
+      image: digitalShop,
+      title: "digitalShop Layout",
+      description:
+        "A modern digitalShop design focused on user experience and interior aesthetics.",
+    },
+    {
+      image: electroShop,
+      title: "ElectroShop Layout",
+      description:
+        "A modern ElectroShop design focused on user experience and interior aesthetics.",
+    },
+    {
+      image: loginForm,
+      title: "LoginForm Layout",
+      description:
+        "A modern LoginForm design focused on user experience and interior aesthetics.",
+    },
+    {
+      image: Blog,
+      title: "Blog Layout",
+      description:
+        "A modern Blog design focused on user experience and interior aesthetics.",
+    },
+  ],
+  fa: [
+    {
+      image: res,
+      title: "پروژه طراحی رستوران و کافه",
+      description:
+        "این پروژه برای نمایش مهارت‌های طراحی بصری من در صنعت رستوران و کافه ایجاد شده است.",
+    },
+    {
+      image: motor,
+      title: "طراحی موتور",
+      description:
+        "طراحی مدرن موتور که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+    },
+    {
+      image: digitalShop,
+      title: "طراحی دیجیتال شاپ",
+      description:
+        "طراحی مدرن دیجیتال شاپ که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+    },
+    {
+      image: electroShop,
+      title: "طراحی الکتروشاپ",
+      description:
+        "طراحی مدرن الکتروشاپ که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+    },
+    {
+      image: loginForm,
+      title: "طراحی فرم ورود",
+      description:
+        "طراحی مدرن فرم ورود که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+    },
+    {
+      image: Blog,
+      title: "طراحی بلاگ",
+      description:
+        "طراحی مدرن بلاگ که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+    },
+  ],
+};
 
 export default function Sites() {
   const [open, setOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [selectedProject, setSelectedProject] = useState(null);
+  const { language } = useLanguage();
+  const fontFamily = language === "fa" ? "Iran" : "Arial";
 
   return (
     <>
       <Grid container spacing={4}>
-        {data.map((project, index) => (
+        {data[language].map((project, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card
               sx={{
@@ -130,13 +173,14 @@ export default function Sites() {
                         backgroundColor: "rgba(255, 255, 255, 0.2)",
                         transform: "scale(1.1)",
                       },
+                      fontFamily: language === "fa" ? "Iran" : "Arial",
                     }}
                     onClick={() => {
                       setSelectedProject(project);
                       setOpen(true);
                     }}
                   >
-                    See More
+                    {data.fa ? "مشاهده بیشتر" : " See More"}
                   </Button>
                 </Box>
               )}
@@ -196,6 +240,7 @@ export default function Sites() {
             <Typography
               variant="h4"
               gutterBottom
+              fontFamily={fontFamily}
               sx={{
                 textShadow: "0 2px 6px rgba(0,0,0,0.5)",
                 fontSize: "2rem",
@@ -206,6 +251,7 @@ export default function Sites() {
 
             <Typography
               variant="body1"
+              fontFamily={fontFamily}
               sx={{
                 mb: 3,
                 textShadow: "0 1px 4px rgba(0,0,0,0.4)",
@@ -227,10 +273,11 @@ export default function Sites() {
                 px: 4,
                 fontSize: "1rem",
                 mb: { xs: 5 },
+                fontFamily: language === "fa" ? "Iran" : "Arial",
               }}
               onClick={() => setOpen(false)}
             >
-              Close
+              {data.fa ? "بستن" : "Close"}
             </Button>
           </Stack>
         </Stack>

@@ -1,8 +1,28 @@
 import React from "react";
 import { Box, Typography, Button, Stack } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { useLanguage } from "../../Utils/LanguageContext ";
+
+const text = {
+  en: {
+    title1: "Do you have Project Idea?",
+    title2: "Let's discuss your project!",
+    subtitle: "Let's Make A Very Beautiful And Modern Website Together",
+    button: "Let's work Together",
+  },
+  fa: {
+    title1: "آیا ایده‌ای برای پروژه دارید؟",
+    title2: "بیایید درباره‌ی پروژه شما صحبت کنیم!",
+    subtitle: "بیایید با هم یک وب‌سایت بسیار زیبا و مدرن بسازیم",
+    button: "بیایید با هم کار کنیم",
+  },
+};
 
 const HaveProject = () => {
+  const { language } = useLanguage();
+  const lang = language;
+  const fontFamily = lang === "fa" ? "Iran" : "Arial";
+
   return (
     <Box
       sx={{
@@ -15,23 +35,38 @@ const HaveProject = () => {
         px: 2,
       }}
     >
-      <Stack spacing={3}>
+      <Stack
+        spacing={3}
+        direction="column"
+        sx={{ direction: lang === "fa" ? "rtl" : "ltr" }}
+      >
         <Box>
-          <Typography variant="h4" fontWeight="bold" color="white">
-            Do you have Project Idea?
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            color="white"
+            fontFamily={fontFamily}
+          >
+            {text[lang].title1}
           </Typography>
-          <Typography variant="h4" fontWeight="bold" color="white">
-            Let's discuss your project!
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            color="white"
+            fontFamily={fontFamily}
+          >
+            {text[lang].title2}
           </Typography>
         </Box>
 
-        <Typography variant="body1" color="gray">
-          Lets Make A Very Beautiful And Modern Website Together
+        <Typography fontFamily={fontFamily} variant="body1" color="gray">
+          {text[lang].subtitle}
         </Typography>
 
         <Button
+          startIcon={lang === "fa" ? <ArrowForwardIcon /> : null}
+          endIcon={lang === "en" ? <ArrowForwardIcon /> : null}
           variant="contained"
-          endIcon={<ArrowForwardIcon />}
           sx={{
             backgroundColor: "#8e2de2",
             textTransform: "none",
@@ -48,9 +83,10 @@ const HaveProject = () => {
             },
             transition: "all 0.3s ease-in-out",
             alignSelf: "center",
+            fontFamily: fontFamily,
           }}
         >
-          Let's work Together
+          {text[lang].button}
         </Button>
       </Stack>
     </Box>

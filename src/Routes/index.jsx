@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "../App"; // همون‌طور که قبلاً بود
+import App from "../App";
 import Home from "../Pages/Home";
 import Header from "../Pages/Home/Header";
 import Describe from "../Pages/Home/Describe";
@@ -8,16 +8,16 @@ import Sites from "../Pages/Portfolio/Sites";
 import WorkProcess from "../Pages/WorkProcess";
 import HaveProject from "../Pages/HaveProject";
 import Questions from "../Pages/Questions";
-import { Navigate } from "react-router-dom";
 import ContactUs from "../Component/Footer/ContactUs";
+import { Navigate } from "react-router-dom";
 
 const routes = createBrowserRouter([
   {
-    path: "/",
+    path: "/:lang",
     element: <App />,
     children: [
       {
-        path: "home",
+        path: "home", 
         element: <Home />,
         children: [
           {
@@ -31,11 +31,11 @@ const routes = createBrowserRouter([
         ],
       },
       {
-        path: "/workProcess",
+        path: "workProcess",
         element: <WorkProcess />,
       },
       {
-        path: "/portfolio",
+        path: "portfolio",
         element: <Portfolio />,
         children: [
           {
@@ -45,18 +45,22 @@ const routes = createBrowserRouter([
         ],
       },
       {
-        path: "/haveProject",
+        path: "haveProject",
         element: <HaveProject />,
       },
       {
-        path: "/questions",
+        path: "questions",
         element: <Questions />,
       },
       {
-        path: "/contact",
+        path: "contact",
         element: <ContactUs />,
       },
     ],
+  },
+  {
+    path: "/",
+    element: <Navigate to="/en/home" />,
   },
 ]);
 

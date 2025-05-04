@@ -8,19 +8,28 @@ import Portfolio from "./Pages/Portfolio";
 import Questions from "./Pages/Questions";
 import Idea from "./Pages/HaveProject";
 import { Outlet } from "react-router-dom";
-
+import { LanguageProvider } from "./Utils/LanguageContext ";
 export default function App() {
   return (
-    <Stack gap={15} sx={{ background: `whitesmoke` }}>
-      <Navbar />
-      <Stack gap={10}>
-      <Home />
-      <WorkProcess />
-      <Portfolio />
-      <Idea />
-      <Questions />
+    <LanguageProvider>
+      <Stack
+        gap={15}
+        sx={{
+          background: `whitesmoke`,
+          fontFamily:
+            "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif , 'Iran'",
+        }}
+      >
+        <Navbar />
+        <Stack gap={10}>
+          <Home />
+          <WorkProcess />
+          <Portfolio />
+          <Idea />
+          <Questions />
+        </Stack>
+        <Footer />
       </Stack>
-      <Footer />
-    </Stack>
+    </LanguageProvider>
   );
 }

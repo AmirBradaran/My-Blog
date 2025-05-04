@@ -1,37 +1,66 @@
 import React from "react";
-import CustomBox from "../../Home/Header/Box"; // تغییر نام به CustomBox
+import CustomBox from "../../Home/Header/Box";
 import {
-  Box as MUIBox, // تغییر نام Box از MUI به MUIBox
+  Box as MUIBox,
   Typography,
   Button,
   useTheme,
   useMediaQuery,
+  Stack,
 } from "@mui/material";
-import {
-  Send as SendIcon,
-} from "@mui/icons-material";
+import { Send as SendIcon } from "@mui/icons-material";
+import { useLanguage } from "../../../Utils/LanguageContext "; // بدون فاصله اضافی
 
-export default function LeftContent() {
+const LeftContent = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const { language } = useLanguage(); // 'en' یا 'fa'
+
+  const text = {
+    en: {
+      title: "What I Do?",
+      description:
+        "Questions you might have about why I’m the right choice to build your next website.",
+      button: "Say Hello!",
+    },
+    fa: {
+      title: "من چه کاری انجام می‌دهم؟",
+      description:
+        "سوالاتی که ممکن است درباره اینکه چرا من انتخاب مناسبی برای ساخت وب‌سایت بعدی شما هستم داشته باشید.",
+      button: " مشاهده !",
+    },
+  };
+  const fontFamily = language === "fa" ? "Iran" : "Arial";
   return (
-    <MUIBox flex={1} textAlign={isMobile ? "center" : "left"}>
-      <Typography variant="h3" fontWeight={900} color="text.primary" mb={2}>
-        What I Do?
+    <Stack
+      sx={{ direction: language === "fa" ? "rtl" : "ltr" }}
+      flex={1}
+      textAlign={isMobile ? "center" : "left"}
+    >
+      <Typography
+        variant="h3"
+        fontFamily={fontFamily}
+        fontWeight={900}
+        color="text.primary"
+        mb={2}
+        textAlign={text.fa ? "right" : "left"}
+      >
+        {text[language].title}
       </Typography>
       <Typography
         variant="body1"
         color="text.secondary"
         maxWidth="450px"
+        fontFamily={fontFamily}
         mb={2}
+        textAlign={text.fa ? "right" : "left"}
       >
-        Questions you might have about why I’m the right choice to build your
-        next website.
+        {text[language].description}
       </Typography>
       <Button
         variant="contained"
         size="large"
-        endIcon={<SendIcon />}
+        startIcon={<SendIcon sx={{ml:1.5}} />}
         sx={{
           background: "linear-gradient(90deg, #a855f7, #9333ea)",
           textTransform: "none",
@@ -43,10 +72,13 @@ export default function LeftContent() {
           "&:hover": {
             background: "linear-gradient(90deg, #9333ea, #7e22ce)",
           },
+          fontFamily: { fontFamily },
         }}
       >
-        Say Hello!
+        {text[language].button}
       </Button>
-    </MUIBox>
+    </Stack>
   );
-}
+};
+
+export default LeftContent;

@@ -1,8 +1,14 @@
 import React from "react";
 import { Paper, Typography, Box, useTheme, alpha } from "@mui/material";
+import { useLanguage } from "../../../../Utils/LanguageContext ";
 
 export default function WorkProcessStep({ step }) {
   const theme = useTheme();
+  const { language } = useLanguage();
+
+  const isFa = language === "fa";
+  const font = isFa ? "Iran" : "Arial";
+
   const purpleMain = "#7c3aed";
   const purpleBg = `linear-gradient(135deg, ${alpha(purpleMain, 0.25)}, ${alpha(
     purpleMain,
@@ -59,6 +65,7 @@ export default function WorkProcessStep({ step }) {
       <Typography
         variant="h6"
         component="h3"
+        fontFamily={font}
         sx={{
           fontWeight: 700,
           mb: 1,
@@ -71,6 +78,7 @@ export default function WorkProcessStep({ step }) {
 
       <Typography
         variant="body2"
+        fontFamily={font}
         sx={{
           color: theme.palette.grey[700],
           lineHeight: 1.75,

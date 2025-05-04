@@ -1,12 +1,34 @@
 import React from "react";
 import CountUp from "../../../../TextAnimations/CountUp/CountUp";
-import { Stack, Typography, useTheme, useMediaQuery, Box as MuiBox } from "@mui/material";
-import { CheckCircle, People, Work } from "@mui/icons-material"; // آیکون‌ها
+import {
+  Stack,
+  Typography,
+  useTheme,
+  useMediaQuery,
+  Box as MuiBox,
+} from "@mui/material";
+import { CheckCircle, People, Work } from "@mui/icons-material";
+import { useLanguage } from "../../../../Utils/LanguageContext "; // اضافه شده برای زبان
 
 export default function Box() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
+
+  const { language } = useLanguage(); // دریافت زبان
+
+  const texts = {
+    en: {
+      experience: "Experience",
+      projects: "Project Completed",
+      clients: "Happy Client",
+    },
+    fa: {
+      experience: "تجربه (سال)",
+      projects: "پروژه‌ انجام‌شده",
+      clients: "مشتری راضی",
+    },
+  };
 
   return (
     <Stack
@@ -14,6 +36,7 @@ export default function Box() {
       gap={isSmallScreen ? 1 : isMediumScreen ? 2 : 3}
       flexWrap={isSmallScreen ? "wrap" : "nowrap"}
       justifyContent="center"
+      sx={{ direction: language === "fa" ? "rtl" : "ltr" }}
     >
       {/* Box for Experience */}
       <MuiBox
@@ -24,7 +47,7 @@ export default function Box() {
         borderRadius={3}
         color="white"
         sx={{
-          backgroundColor: "#2EA98C", // Green
+          backgroundColor: "#2EA98C",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
           width: isSmallScreen ? "40%" : "auto",
           minWidth: isSmallScreen ? 90 : 100,
@@ -45,8 +68,12 @@ export default function Box() {
           duration={1}
           className="count-up-text"
         />
-        <Typography variant={isSmallScreen ? "body2" : "body1"} sx={{ fontWeight: "bold", mt: 1 }}>
-          Experience
+        <Typography
+          fontFamily={texts.fa ? "Iran" : "Arial"}
+          variant={isSmallScreen ? "body2" : "body1"}
+          sx={{ fontWeight: "bold", mt: 1 }}
+        >
+          {texts[language].experience}
         </Typography>
       </MuiBox>
 
@@ -59,7 +86,7 @@ export default function Box() {
         borderRadius={3}
         color="white"
         sx={{
-          backgroundColor: "#FF7043", // Orange
+          backgroundColor: "#FF7043",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
           width: isSmallScreen ? "40%" : "auto",
           minWidth: isSmallScreen ? 90 : 100,
@@ -80,8 +107,12 @@ export default function Box() {
           duration={1}
           className="count-up-text"
         />
-        <Typography variant={isSmallScreen ? "body2" : "body1"} sx={{ fontWeight: "bold", mt: 1 }}>
-          Project Completed
+        <Typography
+          fontFamily={texts.fa ? "Iran" : "Arial"}
+          variant={isSmallScreen ? "body2" : "body1"}
+          sx={{ fontWeight: "bold", mt: 1 }}
+        >
+          {texts[language].projects}
         </Typography>
       </MuiBox>
 
@@ -94,7 +125,7 @@ export default function Box() {
         borderRadius={3}
         color="white"
         sx={{
-          backgroundColor: "#7E57C2", // Purple
+          backgroundColor: "#7E57C2",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
           width: isSmallScreen ? "50%" : "auto",
           minWidth: isSmallScreen ? 90 : 100,
@@ -114,8 +145,12 @@ export default function Box() {
           duration={1}
           className="count-up-text"
         />
-        <Typography variant={isSmallScreen ? "body2" : "body1"} sx={{ fontWeight: "bold", mt: 1 }}>
-          Happy Client
+        <Typography
+          fontFamily={texts.fa ? "Iran" : "Arial"}
+          variant={isSmallScreen ? "body2" : "body1"}
+          sx={{ fontWeight: "bold", mt: 1 }}
+        >
+          {texts[language].clients}
         </Typography>
       </MuiBox>
     </Stack>

@@ -32,7 +32,7 @@ export default function Header() {
 
       <Stack
         gap={10}
-        width={isMobile ? "90%" : "auto"}
+        width={isMobile ? "90%" : "600px"}
         alignItems={isMobile ? "center" : "flex-start"}
       >
         <Texts
