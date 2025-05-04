@@ -7,17 +7,18 @@ import WorkProcess from "./Pages/WorkProcess";
 import Portfolio from "./Pages/Portfolio";
 import Questions from "./Pages/Questions";
 import Idea from "./Pages/HaveProject";
+import { Outlet } from "react-router-dom";
 
 export default function App() {
   return (
     <Stack gap={15} sx={{ background: `whitesmoke` }}>
       <Navbar />
-      <Stack gap={10} sx={{}}>
-        <Home />
-        <WorkProcess />
-        <Portfolio />
-        <Idea/>
-        <Questions/>
+      <Stack gap={10}>
+      <Home />
+      <WorkProcess />
+      <Portfolio />
+      <Idea />
+      <Questions />
       </Stack>
       <Footer />
     </Stack>

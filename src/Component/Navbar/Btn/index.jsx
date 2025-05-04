@@ -11,7 +11,7 @@ import {
   styled,
   keyframes,
 } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll"; // تغییر به react-scroll
 import {
   Menu as MenuIcon,
   Home as HomeIcon,
@@ -57,7 +57,7 @@ const MenuContainer = styled(Box)(({ theme, open }) => ({
   position: "fixed",
   bottom: open ? 65 : 40,
   right: open ? 10 : -250,
-  width: 150,
+  width: 200,
   backgroundColor: "white",
   borderRadius: 10,
   boxShadow: theme.shadows[15],
@@ -73,8 +73,10 @@ const Btn = () => {
   const theme = useTheme();
 
   const items = [
-    { label: "Home", path: "/", icon: <HomeIcon color="secondary" /> },
-    { label: "About", path: "/describe", icon: <InfoIcon color="secondary" /> },
+    { label: "Home", to: "/home" },
+    { label: "Questions", to: "questions" },
+    { label: "Resume", to: "portfolio" },
+    { label: "Contact", to: "contact" },
   ];
 
   const toggleMenu = () => {
@@ -88,8 +90,11 @@ const Btn = () => {
           {items.map((item) => (
             <ListItem key={item.label} disablePadding>
               <ListItemButton
-                component={Link}
-                to={item.path}
+                component={Link} // استفاده از react-scroll Link
+                to={item.to}
+                smooth={true} // اسکرول نرم
+                offset={-70} // فاصله از بالای صفحه
+                duration={500} // مدت زمان اسکرول
                 onClick={toggleMenu}
                 sx={{
                   "&:hover": {
@@ -98,7 +103,9 @@ const Btn = () => {
                   },
                 }}
               >
-                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemIcon>
+                  {item.label === "Home" ? <HomeIcon color="secondary" /> : <InfoIcon color="secondary" />}
+                </ListItemIcon>
                 <ListItemText
                   primary={item.label}
                   primaryTypographyProps={{

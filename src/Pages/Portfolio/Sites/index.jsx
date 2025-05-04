@@ -14,6 +14,7 @@ import motor from "../../../assets/motorx.jpg";
 import digitalShop from "../../../assets/figma(1).jpg";
 import electroShop from "../../../assets/electro.png";
 import loginForm from "../../../assets/login-form-sofa.jpg";
+import Blog from "../../../assets/Blog-Mine.jpg";
 
 const data = [
   {
@@ -45,6 +46,12 @@ const data = [
     title: "LoginForm Layout",
     description:
       "A modern LoginForm design focused on user experience and interior aesthetics.",
+  },
+  {
+    image: Blog,
+    title: "Blog Layout",
+    description:
+      "A modern Blog design focused on user experience and interior aesthetics.",
   },
 ];
 
@@ -85,7 +92,9 @@ export default function Sites() {
                   height: "100%",
                   transition: "transform 0.5s ease-in-out",
                   transform: hoveredIndex === index ? "scale(1.1)" : "scale(1)",
+                  userSelect: "none", // جلوگیری از انتخاب تصویر
                 }}
+                onContextMenu={(e) => e.preventDefault()} // جلوگیری از کلیک راست
               />
               {hoveredIndex === index && (
                 <Box
