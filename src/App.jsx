@@ -21,7 +21,7 @@ export default function App() {
         }}
       >
         <Navbar />
-        <Stack gap={10}>
+        <Stack gap={10} mt={15}>
           <Home />
           <WorkProcess />
           <Portfolio />

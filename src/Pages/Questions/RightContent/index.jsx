@@ -63,7 +63,8 @@ export default function RightContent() {
   const { language } = useLanguage(); // Use the language from context
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
+  const fontFamily = language === "fa" ? "Iran" : "Arial";
+  const align = language === "fa" ? "right" : "left";
   return (
     <Stack spacing={3} flex={1.5}>
       {services[language].map(
@@ -106,15 +107,12 @@ export default function RightContent() {
               variant="h6"
               fontWeight={700}
               gutterBottom
+              fontFamily={fontFamily}
               sx={{
                 mb: 1,
                 color: "text.primary",
                 letterSpacing: "0.5px",
-                textAlign: isMobile
-                  ? "center"
-                  : language === "fa"
-                  ? "right"
-                  : "left", // Align text for RTL
+                textAlign:{align},
                 direction: language === "fa" ? "rtl" : "ltr", // Apply RTL direction for Persian
               }}
             >
@@ -135,9 +133,8 @@ export default function RightContent() {
             <Typography
               variant="body2"
               color="text.secondary"
-              textAlign={
-                isMobile ? "center" : language === "fa" ? "right" : "left"
-              } // Align text for RTL
+              fontFamily={fontFamily}
+              textAlign={align}
               sx={{
                 lineHeight: 1.8,
                 direction: language === "fa" ? "rtl" : "ltr", // Apply RTL direction for Persian

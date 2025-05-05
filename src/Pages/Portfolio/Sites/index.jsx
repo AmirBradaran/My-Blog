@@ -17,91 +17,92 @@ import loginForm from "../../../assets/login-form-sofa.jpg";
 import Blog from "../../../assets/Blog-Mine.jpg";
 import { useLanguage } from "../../../Utils/LanguageContext "; // فرض بر این‌که استفاده می‌کنی
 
-const data = {
-  en: [
-    {
-      image: res,
-      title: "Restaurant and Cafe Design Project",
-      description:
-        "This project is created to showcase my visual design skills in the restaurant and cafe industry.",
-    },
-    {
-      image: motor,
-      title: "Motor Layout",
-      description:
-        "A modern Motor design focused on user experience and interior aesthetics.",
-    },
-    {
-      image: digitalShop,
-      title: "digitalShop Layout",
-      description:
-        "A modern digitalShop design focused on user experience and interior aesthetics.",
-    },
-    {
-      image: electroShop,
-      title: "ElectroShop Layout",
-      description:
-        "A modern ElectroShop design focused on user experience and interior aesthetics.",
-    },
-    {
-      image: loginForm,
-      title: "LoginForm Layout",
-      description:
-        "A modern LoginForm design focused on user experience and interior aesthetics.",
-    },
-    {
-      image: Blog,
-      title: "Blog Layout",
-      description:
-        "A modern Blog design focused on user experience and interior aesthetics.",
-    },
-  ],
-  fa: [
-    {
-      image: res,
-      title: "پروژه طراحی رستوران و کافه",
-      description:
-        "این پروژه برای نمایش مهارت‌های طراحی بصری من در صنعت رستوران و کافه ایجاد شده است.",
-    },
-    {
-      image: motor,
-      title: "طراحی موتور",
-      description:
-        "طراحی مدرن موتور که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
-    },
-    {
-      image: digitalShop,
-      title: "طراحی دیجیتال شاپ",
-      description:
-        "طراحی مدرن دیجیتال شاپ که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
-    },
-    {
-      image: electroShop,
-      title: "طراحی الکتروشاپ",
-      description:
-        "طراحی مدرن الکتروشاپ که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
-    },
-    {
-      image: loginForm,
-      title: "طراحی فرم ورود",
-      description:
-        "طراحی مدرن فرم ورود که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
-    },
-    {
-      image: Blog,
-      title: "طراحی بلاگ",
-      description:
-        "طراحی مدرن بلاگ که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
-    },
-  ],
-};
-
 export default function Sites() {
   const [open, setOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [selectedProject, setSelectedProject] = useState(null);
   const { language } = useLanguage();
   const fontFamily = language === "fa" ? "Iran" : "Arial";
+  const data = {
+    en: [
+      {
+        image: res,
+        title: "Restaurant and Cafe Design Project",
+        description:
+          "This project is created to showcase my visual design skills in the restaurant and cafe industry.",
+      },
+      {
+        image: motor,
+        title: "Motor Layout",
+        description:
+          "A modern Motor design focused on user experience and interior aesthetics.",
+      },
+      {
+        image: digitalShop,
+        title: "digitalShop Layout",
+        description:
+          "A modern digitalShop design focused on user experience and interior aesthetics.",
+      },
+      {
+        image: electroShop,
+        title: "ElectroShop Layout",
+        description:
+          "A modern ElectroShop design focused on user experience and interior aesthetics.",
+      },
+      {
+        image: loginForm,
+        title: "LoginForm Layout",
+        description:
+          "A modern LoginForm design focused on user experience and interior aesthetics.",
+      },
+      {
+        image: Blog,
+        title: "Blog Layout",
+        description:
+          "A modern Blog design focused on user experience and interior aesthetics.",
+      },
+    ],
+    fa: [
+      {
+        image: res,
+        title: "پروژه طراحی رستوران و کافه",
+        description:
+          "این پروژه برای نمایش مهارت‌های طراحی بصری من در صنعت رستوران و کافه ایجاد شده است.",
+      },
+      {
+        image: motor,
+        title: "طراحی موتور",
+        description:
+          "طراحی مدرن موتور که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+      },
+      {
+        image: digitalShop,
+        title: "طراحی دیجیتال شاپ",
+        description:
+          "طراحی مدرن دیجیتال شاپ که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+      },
+      {
+        image: electroShop,
+        title: "طراحی الکتروشاپ",
+        description:
+          "طراحی مدرن الکتروشاپ که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+      },
+      {
+        image: loginForm,
+        title: "طراحی فرم ورود",
+        description:
+          "طراحی مدرن فرم ورود که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+      },
+      {
+        image: Blog,
+        title: "طراحی بلاگ",
+        description:
+          "طراحی مدرن بلاگ که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+      },
+    ],
+  };
+  const closeText = language === "fa" ? "بستن" : "Close";
+  const openText = language === "fa" ? "مشاهده بیشتر" : "See More";
 
   return (
     <>
@@ -180,7 +181,7 @@ export default function Sites() {
                       setOpen(true);
                     }}
                   >
-                    {data.fa ? "مشاهده بیشتر" : " See More"}
+                    {openText}
                   </Button>
                 </Box>
               )}
@@ -277,7 +278,7 @@ export default function Sites() {
               }}
               onClick={() => setOpen(false)}
             >
-              {data.fa ? "بستن" : "Close"}
+              {closeText}
             </Button>
           </Stack>
         </Stack>

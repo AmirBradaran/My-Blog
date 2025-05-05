@@ -23,6 +23,7 @@ export default function Portfolio() {
   const fontFamily = language === "fa" ? "Iran" : "Arial";
 
   return (
+    <div id="portfolio">
     <Stack
       justifyContent={"space-between"}
       alignItems={"center"}
@@ -63,5 +64,6 @@ export default function Portfolio() {
       </Stack>
       <Sites />
     </Stack>
+    </div>
   );
 }

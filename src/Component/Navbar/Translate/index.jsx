@@ -6,11 +6,11 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import {ExpandMore , ExpandLess , GTranslate} from "@mui/icons-material";
+import { ExpandMore, ExpandLess, GTranslate } from "@mui/icons-material";
 import { useLanguage } from "../../../Utils/LanguageContext "; // استفاده از Context
 
 export default function Translate() {
-  const { language, toggleLanguage } = useLanguage(); // دسترسی به زبان و تابع تغییر زبان
+  const { language, toggleLanguage, toLocalDigits } = useLanguage(); // دسترسی به زبان و تابع تغییر زبان
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -30,7 +30,7 @@ export default function Translate() {
         onClick={handleClick}
         endIcon={open ? <ExpandLess /> : <ExpandMore />}
         startIcon={<GTranslate fontSize="small" />}
-        style={{ color: "black", fontFamily:"Iran" }}
+        style={{ color: "black", fontFamily }}
       >
         {language === "fa" ? "فارسی" : "English"}
       </Button>
@@ -52,7 +52,7 @@ export default function Translate() {
             <GTranslate fontSize="small" />
           </ListItemIcon>
           <ListItemText
-            primary={language === "fa" ? "English" : "فارسی"}
+            primary={toLocalDigits(language === "fa" ? "English" : "فارسی")} // استفاده از تابع تبدیل اعداد
             style={{ color: "black", fontFamily }}
           />
         </MenuItem>

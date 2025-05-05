@@ -29,7 +29,7 @@ export default function Box() {
       clients: "مشتری راضی",
     },
   };
-
+  const fontFamily = language === "fa" ? "Iran" : "Arial";
   return (
     <Stack
       direction={"row"}
@@ -69,7 +69,7 @@ export default function Box() {
           className="count-up-text"
         />
         <Typography
-          fontFamily={texts.fa ? "Iran" : "Arial"}
+          fontFamily={fontFamily}
           variant={isSmallScreen ? "body2" : "body1"}
           sx={{ fontWeight: "bold", mt: 1 }}
         >
@@ -108,7 +108,7 @@ export default function Box() {
           className="count-up-text"
         />
         <Typography
-          fontFamily={texts.fa ? "Iran" : "Arial"}
+          fontFamily={fontFamily}
           variant={isSmallScreen ? "body2" : "body1"}
           sx={{ fontWeight: "bold", mt: 1 }}
         >
@@ -146,7 +146,7 @@ export default function Box() {
           className="count-up-text"
         />
         <Typography
-          fontFamily={texts.fa ? "Iran" : "Arial"}
+          fontFamily={fontFamily}
           variant={isSmallScreen ? "body2" : "body1"}
           sx={{ fontWeight: "bold", mt: 1 }}
         >

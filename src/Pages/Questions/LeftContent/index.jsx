@@ -15,7 +15,8 @@ const LeftContent = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const { language } = useLanguage(); // 'en' یا 'fa'
-
+  const fontFamily = language === "fa" ? "Iran" : "Arial";
+  const align = language === "fa" ? "right" : "left";
   const text = {
     en: {
       title: "What I Do?",
@@ -30,7 +31,6 @@ const LeftContent = () => {
       button: " مشاهده !",
     },
   };
-  const fontFamily = language === "fa" ? "Iran" : "Arial";
   return (
     <Stack
       sx={{ direction: language === "fa" ? "rtl" : "ltr" }}
@@ -43,7 +43,7 @@ const LeftContent = () => {
         fontWeight={900}
         color="text.primary"
         mb={2}
-        textAlign={text.fa ? "right" : "left"}
+        textAlign={align}
       >
         {text[language].title}
       </Typography>
@@ -53,14 +53,14 @@ const LeftContent = () => {
         maxWidth="450px"
         fontFamily={fontFamily}
         mb={2}
-        textAlign={text.fa ? "right" : "left"}
+        textAlign={align}
       >
         {text[language].description}
       </Typography>
       <Button
         variant="contained"
         size="large"
-        startIcon={<SendIcon sx={{ml:1.5}} />}
+        startIcon={<SendIcon sx={{ ml: 1.5 }} />}
         sx={{
           background: "linear-gradient(90deg, #a855f7, #9333ea)",
           textTransform: "none",

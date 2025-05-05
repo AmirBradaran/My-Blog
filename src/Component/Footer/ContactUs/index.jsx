@@ -5,6 +5,7 @@ import Form from "./Form";
 
 export default function ContactUs() {
   return (
+    <div id="contact">
     <Box sx={{ bgcolor: "#f9f9f9", py: 8 }}>
       <Paper
         elevation={3}
@@ -25,5 +26,6 @@ export default function ContactUs() {
         <Form />
       </Paper>
     </Box>
+    </div>
   );
 }

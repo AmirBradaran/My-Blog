@@ -8,6 +8,7 @@ export default function Questions() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
+    <div id="questions">
     <Box
       sx={{
         bgcolor: "#f9f9fb",
@@ -32,5 +33,6 @@ export default function Questions() {
         <RightContent />
       </Box>
     </Box>
+    </div>
   );
 }

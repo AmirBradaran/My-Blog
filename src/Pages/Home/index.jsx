@@ -5,11 +5,11 @@ import { Stack } from "@mui/material";
 
 export default function Home() {
   return (
-    <>
-      <Stack gap={{ xs: 5, md: 10 }} sx={{}}>
+    <div id="home">
+      <Stack  gap={{ xs: 5, md: 10 }} sx={{}}>
         <Header />
         <Describe />
       </Stack>
-    </>
+    </div>
   );
 }
