@@ -101,7 +101,7 @@ export default function Box() {
         <Work sx={{ fontSize: 40 }} />
         <CountUp
           from={0}
-          to={30}
+          to={20}
           separator=","
           direction="up"
           duration={1}

@@ -1,6 +1,7 @@
 {
   "name": "my-blog",
   "private": true,
+  "homepage":"http://selfbrweb.ir/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

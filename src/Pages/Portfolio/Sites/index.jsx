@@ -15,6 +15,8 @@ import digitalShop from "../../../assets/figma(1).jpg";
 import electroShop from "../../../assets/electro.png";
 import loginForm from "../../../assets/login-form-sofa.jpg";
 import Blog from "../../../assets/Blog-Mine.jpg";
+import LoginForm2 from "../../../assets/Login-Admin.jpg";
+import Dashboard from "../../../assets/Desktop-Dashboard-Admin Panel.jpg";
 import { useLanguage } from "../../../Utils/LanguageContext "; // فرض بر این‌که استفاده می‌کنی
 
 export default function Sites() {
@@ -61,6 +63,18 @@ export default function Sites() {
         description:
           "A modern Blog design focused on user experience and interior aesthetics.",
       },
+      {
+        image: LoginForm2,
+        title: "Login Form Layout",
+        description:
+          "A modern Login Form design focused on user experience and interior aesthetics.",
+      },
+      {
+        image: Dashboard,
+        title: "Admin Panel Layout",
+        description:
+          "A modern Admin Panel design focused on user experience and interior aesthetics.",
+      },
     ],
     fa: [
       {
@@ -98,6 +112,18 @@ export default function Sites() {
         title: "طراحی بلاگ",
         description:
           "طراحی مدرن بلاگ که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+      },
+      {
+        image: LoginForm2,
+        title: "طراحی لاگین فرم",
+        description:
+          "طراحی مدرن لاگین فرم که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+      },
+      {
+        image: Dashboard,
+        title: "طراحی پنل ادمین",
+        description:
+          "طراحی مدرن پنل ادمین که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
       },
     ],
   };
