@@ -41,7 +41,7 @@ export default function Portfolio() {
       }}
       borderRadius={5}
       position="relative"
-      spacing={isSmallScreen ? 4 : 0}
+      spacing={isSmallScreen ? 5 : 0}
     >
       <Stack justifyContent={"center"} alignItems={"center"} gap={1}>
         <Typography
@@ -49,7 +49,7 @@ export default function Portfolio() {
           textAlign={"center"}
           fontWeight={"bold"}
           letterSpacing={"4px"}
-          fontFamily={fontFamily} // اعمال فونت
+          fontFamily={fontFamily}
         >
           {titles[language].heading}
         </Typography>
@@ -57,7 +57,7 @@ export default function Portfolio() {
           textTransform={"capitalize"}
           variant="body1"
           textAlign={"center"}
-          fontFamily={fontFamily} // اعمال فونت
+          fontFamily={fontFamily}
         >
           {titles[language].description}
         </Typography>

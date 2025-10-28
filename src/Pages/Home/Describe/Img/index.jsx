@@ -1,6 +1,6 @@
 import { Stack } from '@mui/material'
 import React from 'react'
-import layer1Img from "../../../../assets/layer1.png";
+import MeImg from "../../../../assets/Me-(2).png";
 export default function Img() {
   return (
     <Stack
@@ -15,7 +15,7 @@ export default function Img() {
       }}
     >
       <img
-        src={layer1Img}
+        src={MeImg}
         alt=""
         style={{
           width: "100%",

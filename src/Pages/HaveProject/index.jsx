@@ -42,7 +42,7 @@ const HaveProject = () => {
       >
         <Box>
           <Typography
-            variant="h4"
+            variant="h5"
             fontWeight="bold"
             color="white"
             fontFamily={fontFamily}
@@ -50,7 +50,7 @@ const HaveProject = () => {
             {text[lang].title1}
           </Typography>
           <Typography
-            variant="h4"
+            variant="h6"
             fontWeight="bold"
             color="white"
             fontFamily={fontFamily}
@@ -68,6 +68,7 @@ const HaveProject = () => {
           endIcon={lang === "en" ? <ArrowForwardIcon /> : null}
           variant="contained"
           sx={{
+            gap:2.5 ,
             backgroundColor: "#8e2de2",
             textTransform: "none",
             px: 4,

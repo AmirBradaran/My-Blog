@@ -16,7 +16,10 @@ import electroShop from "../../../assets/electro.png";
 import loginForm from "../../../assets/login-form-sofa.jpg";
 import Blog from "../../../assets/Blog-Mine.jpg";
 import LoginForm2 from "../../../assets/Login-Admin.jpg";
+import LoginForm3 from "../../../assets/Login-Page.jpg";
 import Dashboard from "../../../assets/Desktop-Dashboard-Admin Panel.jpg";
+import DashboardV3 from "../../../assets/Dashboard-Admin-Panel-v-03.jpg";
+import StdDashboard from "../../../assets/Std-Dshboard-v1.jpg";
 import { useLanguage } from "../../../Utils/LanguageContext "; // فرض بر این‌که استفاده می‌کنی
 
 export default function Sites() {
@@ -67,10 +70,28 @@ export default function Sites() {
         image: LoginForm2,
         title: "Login Form Layout",
         description:
-          "A modern Login Form design focused on user experience and interior aesthetics.",
+        "A modern Login Form design focused on user experience and interior aesthetics.",
+      },
+      {
+        image: LoginForm3,
+        title: "Login Form Layout",
+        description:
+        "A modern Login Form design focused on user experience and interior aesthetics.",
       },
       {
         image: Dashboard,
+        title: "Admin Panel Layout",
+        description:
+          "A modern Admin Panel design focused on user experience and interior aesthetics.",
+      },
+      {
+        image: StdDashboard,
+        title: "Admin Panel Layout",
+        description:
+          "A modern Admin Panel design focused on user experience and interior aesthetics.",
+      },
+      {
+        image: DashboardV3,
         title: "Admin Panel Layout",
         description:
           "A modern Admin Panel design focused on user experience and interior aesthetics.",
@@ -120,7 +141,25 @@ export default function Sites() {
           "طراحی مدرن لاگین فرم که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
       },
       {
+        image: LoginForm3,
+        title: "طراحی لاگین فرم",
+        description:
+          "طراحی مدرن لاگین فرم که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+      },
+      {
         image: Dashboard,
+        title: "طراحی پنل ادمین",
+        description:
+          "طراحی مدرن پنل ادمین که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+      },
+      {
+        image:  StdDashboard,
+        title: "طراحی پنل ادمین",
+        description:
+          "طراحی مدرن پنل ادمین که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+      },
+      {
+        image: DashboardV3,
         title: "طراحی پنل ادمین",
         description:
           "طراحی مدرن پنل ادمین که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
