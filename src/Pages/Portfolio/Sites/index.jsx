@@ -9,18 +9,18 @@ import {
   Grid,
   Stack,
 } from "@mui/material";
-import res from "../../../assets/Resturant.jpg";
+import landing from "../../../assets/Dark-Landing-Page.jpg";
 import motor from "../../../assets/motorx.jpg";
 import digitalShop from "../../../assets/figma(1).jpg";
 import electroShop from "../../../assets/electro.png";
-import loginForm from "../../../assets/login-form-sofa.jpg";
+import DashboardV2 from "../../../assets/Dashboard-Page-v1.jpg";
 import Blog from "../../../assets/Blog-Mine.jpg";
-import LoginForm2 from "../../../assets/Login-Admin.jpg";
-import LoginForm3 from "../../../assets/Login-Page.jpg";
-import Dashboard from "../../../assets/Desktop-Dashboard-Admin Panel.jpg";
+import LightInformationPage from "../../../assets/Light-Information-Page.jpg";
+import DesktopDashboardAdminPanelv3 from "../../../assets/Desktop-Dashboard-Admin-Panel-v3.png";
+import BuyAndSellTable1 from "../../../assets/Buy-and-sell-table-1.jpg";
 import DashboardV3 from "../../../assets/Dashboard-Admin-Panel-v-03.jpg";
 import StdDashboard from "../../../assets/Std-Dshboard-v1.jpg";
-import { useLanguage } from "../../../Utils/LanguageContext "; // فرض بر این‌که استفاده می‌کنی
+import { useLanguage } from "../../../Utils/LanguageContext ";
 
 export default function Sites() {
   const [open, setOpen] = useState(false);
@@ -31,10 +31,10 @@ export default function Sites() {
   const data = {
     en: [
       {
-        image: res,
-        title: "Restaurant and Cafe Design Project",
+        image: landing,
+        title: "Landing Page Design Project",
         description:
-          "This project is created to showcase my visual design skills in the restaurant and cafe industry.",
+          "This project is created to showcase my visual design skills in the Landing Page industry.",
       },
       {
         image: motor,
@@ -55,10 +55,10 @@ export default function Sites() {
           "A modern ElectroShop design focused on user experience and interior aesthetics.",
       },
       {
-        image: loginForm,
-        title: "LoginForm Layout",
+        image: DashboardV2,
+        title: "Dashboard Layout",
         description:
-          "A modern LoginForm design focused on user experience and interior aesthetics.",
+          "A modern Dashboard design focused on user experience and interior aesthetics.",
       },
       {
         image: Blog,
@@ -67,22 +67,22 @@ export default function Sites() {
           "A modern Blog design focused on user experience and interior aesthetics.",
       },
       {
-        image: LoginForm2,
-        title: "Login Form Layout",
+        image: LightInformationPage,
+        title: "LightInformationPage Form Layout",
         description:
-        "A modern Login Form design focused on user experience and interior aesthetics.",
+        "A modern LightInformationPage Form design focused on user experience and interior aesthetics.",
       },
       {
-        image: LoginForm3,
-        title: "Login Form Layout",
+        image: DesktopDashboardAdminPanelv3,
+        title: "DesktopDashboardAdminPanel Form Layout",
         description:
-        "A modern Login Form design focused on user experience and interior aesthetics.",
+        "A modern DesktopDashboardAdminPanel Form design focused on user experience and interior aesthetics.",
       },
       {
-        image: Dashboard,
-        title: "Admin Panel Layout",
+        image: BuyAndSellTable1,
+        title: "BuyAndSellTable Panel Layout",
         description:
-          "A modern Admin Panel design focused on user experience and interior aesthetics.",
+          "A modern BuyAndSellTable Panel design focused on user experience and interior aesthetics.",
       },
       {
         image: StdDashboard,
@@ -99,10 +99,10 @@ export default function Sites() {
     ],
     fa: [
       {
-        image: res,
-        title: "پروژه طراحی رستوران و کافه",
+        image: landing,
+        title: "پروژه طراحی صفحه اصلی صفحه چت",
         description:
-          "این پروژه برای نمایش مهارت‌های طراحی بصری من در صنعت رستوران و کافه ایجاد شده است.",
+          "این پروژه برای نمایش مهارت‌های طراحی بصری من در صنعت صفحه اصلی صفحه چت ایجاد شده است.",
       },
       {
         image: motor,
@@ -123,10 +123,10 @@ export default function Sites() {
           "طراحی مدرن الکتروشاپ که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
       },
       {
-        image: loginForm,
-        title: "طراحی فرم ورود",
+        image: DashboardV2,
+        title: "طراحی داشبورد",
         description:
-          "طراحی مدرن فرم ورود که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+          "طراحی مدرن داشبورد که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
       },
       {
         image: Blog,
@@ -135,22 +135,22 @@ export default function Sites() {
           "طراحی مدرن بلاگ که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
       },
       {
-        image: LoginForm2,
-        title: "طراحی لاگین فرم",
+        image: LightInformationPage,
+        title: "طراحی داشبورد مدیریت",
         description:
-          "طراحی مدرن لاگین فرم که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+          "طراحی مدرن داشبورد مدیریت که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
       },
       {
-        image: LoginForm3,
-        title: "طراحی لاگین فرم",
+        image: DesktopDashboardAdminPanelv3,
+        title: "طراحی داشبورد مدیریت",
         description:
-          "طراحی مدرن لاگین فرم که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+          "طراحی مدرن داشبورد مدیریت که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
       },
       {
-        image: Dashboard,
-        title: "طراحی پنل ادمین",
+        image: BuyAndSellTable1,
+        title: "طراحی جدول",
         description:
-          "طراحی مدرن پنل ادمین که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
+          "طراحی مدرن جدول که بر تجربه کاربری و زیبایی‌شناسی داخلی تمرکز دارد.",
       },
       {
         image:  StdDashboard,
