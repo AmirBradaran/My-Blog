@@ -62,7 +62,7 @@ export default function Box() {
         <CheckCircle sx={{ fontSize: 40 }} />
         <CountUp
           from={0}
-          to={1}
+          to={4}
           separator=","
           direction="up"
           duration={1}
@@ -101,7 +101,7 @@ export default function Box() {
         <Work sx={{ fontSize: 40 }} />
         <CountUp
           from={0}
-          to={20}
+          to={30}
           separator=","
           direction="up"
           duration={1}
@@ -139,7 +139,7 @@ export default function Box() {
         <People sx={{ fontSize: 40 }} />
         <CountUp
           from={0}
-          to={20}
+          to={30}
           separator=","
           direction="up"
           duration={1}
