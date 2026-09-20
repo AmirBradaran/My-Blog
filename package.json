@@ -12,7 +12,8 @@
     "preview": "vite preview",
     "deploy:pages": "npm run build && wrangler deploy",
     "deploy:worker": "npm run build && wrangler deploy",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "vercel --prod",
+    "deploy:vercel": "vercel --prod"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.8",

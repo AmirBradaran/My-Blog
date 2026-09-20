@@ -45,23 +45,31 @@ cd worker
 npx wrangler secret put RESEND_API_KEY
 ```
 
-## Deploy to Cloudflare
+## Deploy to Vercel
 
-This project deploys as a **Worker + static assets** (Vite `dist/`):
+This site is configured for **Vercel** (Vite frontend + `/api/contact` serverless).
 
 ```bash
+npm install
 npm run build
-npx wrangler deploy
-# Cloudflare dashboard deploy command can stay:
-# npx wrangler versions upload
+npx vercel --prod
 ```
 
-`wrangler.toml` points assets at `./dist` and the Worker handles `POST /api/contact`.
+Or connect the GitHub repo in the Vercel dashboard — pushes to `main` auto-deploy.
 
-Set secrets in the Cloudflare dashboard (or via CLI):
+### Environment variables (Vercel → Project → Settings → Environment Variables)
 
-- `RESEND_API_KEY`
-- optional overrides: `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`, `ALLOWED_ORIGINS`
+| Name | Required | Example |
+|------|----------|---------|
+| `RESEND_API_KEY` | yes (for contact form) | `re_xxx` |
+| `CONTACT_TO_EMAIL` | no | `baradaran13085@gmail.com` |
+| `CONTACT_FROM_EMAIL` | no | `Portfolio <onboarding@resend.dev>` |
+
+Live site (existing project): https://my-blog-qrlf.vercel.app
+
+### Optional Cloudflare Worker
+
+`wrangler.toml` / `worker/` remain available but are not required for Vercel.
 
 ## Content
 
