@@ -16,6 +16,8 @@ npm install
 npm run dev
 ```
 
+Cloudflare Pages uses `npm ci`. This repo includes `.npmrc` with `legacy-peer-deps=true` so peer conflicts do not fail the install.
+
 Optional local API (second terminal):
 
 ```bash
