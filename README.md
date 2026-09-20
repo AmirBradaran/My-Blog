@@ -47,18 +47,21 @@ npx wrangler secret put RESEND_API_KEY
 
 ## Deploy to Cloudflare
 
+This project deploys as a **Worker + static assets** (Vite `dist/`):
+
 ```bash
 npm run build
-npx wrangler pages deploy dist --project-name baradaran-portfolio
+npx wrangler deploy
+# Cloudflare dashboard deploy command can stay:
+# npx wrangler versions upload
 ```
 
-Pages will pick up `functions/api/contact.js` automatically as `/api/contact`.
+`wrangler.toml` points assets at `./dist` and the Worker handles `POST /api/contact`.
 
-Standalone worker (optional):
+Set secrets in the Cloudflare dashboard (or via CLI):
 
-```bash
-npm run deploy:worker
-```
+- `RESEND_API_KEY`
+- optional overrides: `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`, `ALLOWED_ORIGINS`
 
 ## Content
 

@@ -28,3 +28,4 @@ worker/.dev.vars
 *.njsproj
 *.sln
 *.sw?
+.wrangler-dry
