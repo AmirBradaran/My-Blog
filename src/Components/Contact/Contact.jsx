@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Reveal from "../Reveal";
 import { useLanguage } from "../../Utils/LanguageContext";
-import { contact, footer } from "../../data/content";
+import { contact, footer, brand } from "../../data/content";
 import "./Contact.css";
 
 const API_URL = import.meta.env.VITE_CONTACT_API_URL || "/api/contact";
@@ -154,7 +154,7 @@ export default function Contact() {
 
       <footer className="site-footer container">
         <p>
-          © {new Date().getFullYear()} Baradaran — {footer[language].rights}
+          © {new Date().getFullYear()} {brand.fullName[language]} — {footer[language].rights}
         </p>
         <p dir="ltr" className="site-footer__meta">
           {isFa ? "FA / EN" : "EN / FA"}

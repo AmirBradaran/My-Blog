@@ -13,8 +13,12 @@ import dashAdminImg from "../assets/Dashboard-Admin-Panel-v-03.jpg";
 export const brand = {
   name: "Baradaran",
   fullName: {
-    en: "Amir Baradaran",
-    fa: "امیر برادران",
+    en: "AmirMohammad Baradaran Hosseini",
+    fa: "امیرمحمد برادران حسینی",
+  },
+  shortName: {
+    en: "AmirMohammad",
+    fa: "امیرمحمد",
   },
   role: {
     en: "Front-end Developer & UI Designer",
@@ -66,7 +70,7 @@ export const about = {
   en: {
     eyebrow: "About",
     title: "Building digital products people feel.",
-    body: "I'm Amir Baradaran — a freelance front-end developer and UI designer based in Mashhad. I turn ideas into polished React experiences with careful typography, responsive structure, and intentional motion.",
+    body: "I'm AmirMohammad Baradaran Hosseini — a freelance front-end developer and UI designer based in Mashhad. I turn ideas into polished React experiences with careful typography, responsive structure, and intentional motion.",
     points: [
       "Hireable and open to remote collaboration",
       "Focused on React, modern CSS, and UX clarity",
@@ -76,7 +80,7 @@ export const about = {
   fa: {
     eyebrow: "درباره من",
     title: "محصولاتی دیجیتال که حس می‌شوند.",
-    body: "من امیر برادران هستم — توسعه‌دهنده فرانت‌اند فریلنسر و طراح UI مقیم مشهد. ایده‌ها را به تجربه‌های React صیقلی تبدیل می‌کنم با تایپوگرافی دقیق، ساختار واکنش‌گرا و موشن هدفمند.",
+    body: "من امیرمحمد برادران حسینی هستم — توسعه‌دهنده فرانت‌اند فریلنسر و طراح UI مقیم مشهد. ایده‌ها را به تجربه‌های React صیقلی تبدیل می‌کنم با تایپوگرافی دقیق، ساختار واکنش‌گرا و موشن هدفمند.",
     points: [
       "آماده همکاری ریموت و استخدام",
       "تمرکز روی React، CSS مدرن و وضوح UX",

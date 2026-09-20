@@ -36,7 +36,17 @@ export default function Navbar() {
           className="nav__brand"
           onClick={() => setOpen(false)}
         >
-          {brand.name}
+          <img
+            src="/logo.png"
+            alt=""
+            className="nav__logo"
+            width={36}
+            height={36}
+          />
+          <span className="nav__brand-text">
+            <strong>{brand.name}</strong>
+            <small>{brand.fullName[language]}</small>
+          </span>
         </Link>
 
         <nav className="nav__links" aria-label="Primary">

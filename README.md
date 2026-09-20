@@ -1,6 +1,6 @@
 # Baradaran — Cinematic Portfolio
 
-Personal portfolio for **Amir Baradaran** (Mashhad) — React + Vite, cinematic 3D hero, bilingual FA/EN, and a lightweight Cloudflare contact API.
+Personal portfolio for **AmirMohammad Baradaran Hosseini** (Mashhad) — React + Vite, cinematic 3D hero, bilingual FA/EN, and a lightweight Cloudflare contact API.
 
 ## Stack
 

@@ -19,14 +19,46 @@ export default function Hero() {
       </Suspense>
       <div className="hero__veil" />
       <div className="container hero__content">
-        <motion.p
+        <motion.div
           className="hero__brand"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          aria-label={t.brand}
         >
-          {t.brand}
-        </motion.p>
+          <svg
+            className="hero__brand-svg"
+            viewBox="0 0 980 160"
+            role="img"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#ffffff" />
+                <stop offset="42%" stopColor="#e8fff8" />
+                <stop offset="78%" stopColor="#2dd4bf" />
+                <stop offset="100%" stopColor="#38bdf8" />
+              </linearGradient>
+              <filter id="brandGlow" x="-20%" y="-40%" width="140%" height="180%">
+                <feDropShadow dx="0" dy="0" stdDeviation="8" floodColor="#2dd4bf" floodOpacity="0.35" />
+                <feDropShadow dx="0" dy="12" stdDeviation="14" floodColor="#000" floodOpacity="0.45" />
+              </filter>
+            </defs>
+            <text
+              x="24"
+              y="112"
+              fill="url(#brandGrad)"
+              filter="url(#brandGlow)"
+              fontFamily="Syne, IranYekan, sans-serif"
+              fontWeight="800"
+              fontSize="118"
+              letterSpacing="-1.5"
+            >
+              {t.brand}
+            </text>
+          </svg>
+          <span className="sr-only">{t.brand}</span>
+        </motion.div>
         <motion.h1
           className="hero__headline"
           initial={{ opacity: 0, y: 32 }}

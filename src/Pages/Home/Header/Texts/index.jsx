@@ -18,13 +18,13 @@ export default function Texts() {
   // متون برای هر زبان
   const content = {
     en: {
-      header: "I'm Amir Baradaran",
+      header: "I'm AmirMohammad Baradaran Hosseini",
       description:
         "I'm a Freelance UI/UX Designer and Front-end Developer based in Mashad(Iran). I strive to build modern and beautiful web applications through carefully and user-centric design.",
       button: "Say Hello!",
     },
     fa: {
-      header: "امیر برادارن هستم",
+      header: "امیرمحمد برادران حسینی هستم",
       description:
         "من یک طراح UI/UX فریلنسر و توسعه‌دهنده Front-end از مشهد، ایران هستم. تلاش می‌کنم تا وب‌اپلیکیشن‌های زیبا و مدرن و همچنین طراحی متمرکز بر راحت بودن کاربر بسازم.",
       button: "خوش آمدید !",
