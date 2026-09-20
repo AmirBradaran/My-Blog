@@ -1,0 +1,131 @@
+.contact__grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.contact__details {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact__details span {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.contact__details strong {
+  font-size: 1rem;
+}
+
+.contact__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.75rem;
+}
+
+.contact__socials a {
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: color 0.25s var(--ease), border-color 0.25s var(--ease),
+    background 0.25s var(--ease);
+}
+
+.contact__socials a:hover {
+  color: var(--accent);
+  border-color: var(--border-strong);
+  background: rgba(45, 212, 191, 0.06);
+}
+
+.contact__form-wrap {
+  padding: 1.4rem;
+}
+
+.contact__form {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.contact__form label {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.contact__form label span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.contact__form input,
+.contact__form textarea {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(7, 11, 16, 0.65);
+  padding: 0.85rem 1rem;
+  outline: none;
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  border-color: var(--border-strong);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.12);
+}
+
+.contact__form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact__form .btn {
+  width: fit-content;
+  margin-top: 0.35rem;
+}
+
+.contact__form .btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.contact__status {
+  font-size: 0.9rem;
+}
+
+.contact__status--ok {
+  color: var(--success);
+}
+
+.contact__status--err {
+  color: var(--danger);
+}
+
+.site-footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+@media (min-width: 900px) {
+  .contact__grid {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  .contact__form-wrap {
+    padding: 1.75rem;
+  }
+}

@@ -1,12 +1,63 @@
-# React + Vite
+# Baradaran — Cinematic Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio for **Amir Baradaran** (Mashhad) — React + Vite, cinematic 3D hero, bilingual FA/EN, and a lightweight Cloudflare contact API.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19 + Vite
+- Framer Motion + React Three Fiber (hero only)
+- Cloudflare Pages (static) + Pages Function / Worker (`POST /api/contact`)
+- Resend for email delivery (no database — minimal data use)
 
-## Expanding the ESLint configuration
+## Develop
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Optional local API (second terminal):
+
+```bash
+cp worker/.dev.vars.example worker/.dev.vars
+# put your RESEND_API_KEY in worker/.dev.vars
+npm run dev:api
+```
+
+Vite proxies `/api/*` to `http://127.0.0.1:8787`.
+
+## Contact email setup
+
+1. Create a [Resend](https://resend.com) API key.
+2. Set secrets for Pages / Worker:
+   - `RESEND_API_KEY`
+   - `CONTACT_TO_EMAIL` (default: `baradaran13085@gmail.com`)
+   - `CONTACT_FROM_EMAIL` (verified sender, or Resend onboarding address for tests)
+   - `ALLOWED_ORIGINS` (comma-separated production domains)
+
+Cloudflare dashboard → Pages project → Settings → Environment variables  
+or:
+
+```bash
+cd worker
+npx wrangler secret put RESEND_API_KEY
+```
+
+## Deploy to Cloudflare
+
+```bash
+npm run build
+npx wrangler pages deploy dist --project-name baradaran-portfolio
+```
+
+Pages will pick up `functions/api/contact.js` automatically as `/api/contact`.
+
+Standalone worker (optional):
+
+```bash
+npm run deploy:worker
+```
+
+## Content
+
+All FA/EN copy, projects, and resume data live in `src/data/content.js`.

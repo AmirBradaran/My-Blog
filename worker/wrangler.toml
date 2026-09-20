@@ -1,0 +1,12 @@
+name = "baradaran-contact"
+main = "src/index.js"
+compatibility_date = "2025-04-01"
+
+[vars]
+# Non-secret defaults (override in dashboard / .dev.vars)
+CONTACT_TO_EMAIL = "baradaran13085@gmail.com"
+CONTACT_FROM_EMAIL = "Portfolio <onboarding@resend.dev>"
+ALLOWED_ORIGINS = "http://localhost:5173,http://127.0.0.1:5173"
+
+# Secrets (set via `wrangler secret put`):
+# RESEND_API_KEY

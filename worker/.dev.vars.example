@@ -1,0 +1,5 @@
+# Copy to worker/.dev.vars for local `wrangler dev`
+RESEND_API_KEY=re_xxxxxxxx
+CONTACT_TO_EMAIL=baradaran13085@gmail.com
+CONTACT_FROM_EMAIL=Portfolio <onboarding@resend.dev>
+ALLOWED_ORIGINS=http://localhost:5173,http://127.0.0.1:5173,https://your-pages-domain.pages.dev

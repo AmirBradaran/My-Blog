@@ -1,0 +1,16 @@
+.hero-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-scene--mobile canvas {
+  opacity: 0.7;
+}
+
+.hero-scene--fallback {
+  background:
+    radial-gradient(circle at 65% 40%, rgba(45, 212, 191, 0.22), transparent 42%),
+    radial-gradient(circle at 30% 70%, rgba(56, 189, 248, 0.16), transparent 40%),
+    linear-gradient(160deg, #070b10 0%, #0d1822 50%, #071018 100%);
+}
