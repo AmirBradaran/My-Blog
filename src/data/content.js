@@ -50,36 +50,36 @@ export const nav = {
 export const hero = {
   en: {
     brand: "Baradaran",
-    headline: "Interfaces with cinematic presence.",
+    headline: "Front-end developer & UI designer.",
     support:
-      "I craft modern web experiences where motion, clarity, and craft meet — built to hire, built to last.",
-    ctaPrimary: "View Work",
-    ctaSecondary: "Let's Talk",
+      "I build modern React websites and interfaces — clean, responsive, and ready for real products.",
+    ctaPrimary: "View projects",
+    ctaSecondary: "Contact me",
   },
   fa: {
     brand: "Baradaran",
-    headline: "رابط‌هایی با حضور سینمایی.",
+    headline: "توسعه‌دهنده فرانت‌اند و طراح UI",
     support:
-      "تجربه‌های وب مدرن می‌سازم جایی که حرکت، وضوح و دقت به هم می‌رسند — برای استخدام شدن، برای ماندن.",
-    ctaPrimary: "مشاهده کارها",
-    ctaSecondary: "گفتگو کنیم",
+      "وب‌سایت و رابط کاربری مدرن با React می‌سازم — تمیز، واکنش‌گرا و آماده برای محصول واقعی.",
+    ctaPrimary: "پروژه‌ها",
+    ctaSecondary: "تماس با من",
   },
 };
 
 export const about = {
   en: {
-    eyebrow: "About",
-    title: "Building digital products people feel.",
+    eyebrow: "About me",
+    title: "Who I am and what I build.",
     body: "I'm AmirMohammad Baradaran Hosseini — a freelance front-end developer and UI designer based in Mashhad. I turn ideas into polished React experiences with careful typography, responsive structure, and intentional motion.",
     points: [
-      "Hireable and open to remote collaboration",
-      "Focused on React, modern CSS, and UX clarity",
-      "Shipping real products from concept to deploy",
+      "Open to remote work and hiring",
+      "Focused on React, modern CSS, and clear UX",
+      "From idea to deploy on real products",
     ],
   },
   fa: {
     eyebrow: "درباره من",
-    title: "محصولاتی دیجیتال که حس می‌شوند.",
+    title: "من کیستم و چه می‌سازم.",
     body: "من امیرمحمد برادران حسینی هستم — توسعه‌دهنده فرانت‌اند فریلنسر و طراح UI مقیم مشهد. ایده‌ها را به تجربه‌های React صیقلی تبدیل می‌کنم با تایپوگرافی دقیق، ساختار واکنش‌گرا و موشن هدفمند.",
     points: [
       "آماده همکاری ریموت و استخدام",
@@ -92,7 +92,7 @@ export const about = {
 export const resume = {
   en: {
     eyebrow: "Resume",
-    title: "Experience shaped by shipped work.",
+    title: "Skills, experience, and focus.",
     experienceTitle: "Experience",
     skillsTitle: "Skills",
     statsTitle: "At a glance",
@@ -130,8 +130,8 @@ export const resume = {
   },
   fa: {
     eyebrow: "رزومه",
-    title: "تجربه‌ای ساخته‌شده از کار واقعی.",
-    experienceTitle: "سابقه",
+    title: "مهارت‌ها، سابقه و مسیر کاری.",
+    experienceTitle: "سابقه کاری",
     skillsTitle: "مهارت‌ها",
     statsTitle: "در یک نگاه",
     experience: [
@@ -170,18 +170,18 @@ export const resume = {
 
 export const projects = {
   en: {
-    eyebrow: "Selected Work",
-    title: "Projects from the build log.",
-    subtitle: "Real repositories and UI studies — click through to GitHub.",
+    eyebrow: "Portfolio",
+    title: "Selected projects.",
+    subtitle: "Real GitHub work and UI studies — open a repo to see the code.",
     viewGithub: "GitHub",
     viewLive: "Live",
   },
   fa: {
-    eyebrow: "کارهای منتخب",
-    title: "پروژه‌ها از لاگ ساخت.",
-    subtitle: "ریپازیتوری‌های واقعی و مطالعات UI — برای دیدن کد به گیت‌هاب بروید.",
+    eyebrow: "نمونه کارها",
+    title: "پروژه‌های منتخب.",
+    subtitle: "کارهای واقعی گیت‌هاب و مطالعات UI — برای دیدن کد وارد ریپو شوید.",
     viewGithub: "گیت‌هاب",
-    viewLive: "لایو",
+    viewLive: "نسخه آنلاین",
   },
   items: [
     {
@@ -332,54 +332,54 @@ export const projects = {
 
 export const process = {
   en: {
-    eyebrow: "Process",
-    title: "How the work moves.",
+    eyebrow: "Work process",
+    title: "From brief to launch.",
     steps: [
       {
         num: "01",
-        title: "Discovery & Plan",
-        text: "Clarify goals, users, and constraints before a single pixel ships.",
+        title: "Listen & plan",
+        text: "Understand goals, users, and constraints before design starts.",
       },
       {
         num: "02",
-        title: "Design System",
-        text: "Define type, color, and motion so the product feels intentional.",
+        title: "UI design",
+        text: "Define layout, type, and color so the product feels clear and intentional.",
       },
       {
         num: "03",
-        title: "Build & Polish",
-        text: "React implementation with responsive layouts and cinematic detail.",
+        title: "Front-end build",
+        text: "Implement with React — responsive, fast, and carefully polished.",
       },
       {
         num: "04",
-        title: "Ship & Support",
-        text: "Deploy, document, and iterate with feedback that matters.",
+        title: "Launch & support",
+        text: "Deploy, hand over docs, and improve with real feedback.",
       },
     ],
   },
   fa: {
-    eyebrow: "فرآیند",
-    title: "کار چگونه جلو می‌رود.",
+    eyebrow: "فرآیند کار",
+    title: "از ایده تا انتشار.",
     steps: [
       {
         num: "۰۱",
-        title: "کشف و برنامه",
-        text: "اهداف، کاربران و محدودیت‌ها را قبل از یک پیکسل مشخص می‌کنم.",
+        title: "شنیدن و برنامه‌ریزی",
+        text: "اهداف، کاربران و محدودیت‌ها را قبل از شروع طراحی مشخص می‌کنم.",
       },
       {
         num: "۰۲",
-        title: "سیستم طراحی",
-        text: "تایپ، رنگ و موشن را تعریف می‌کنم تا محصول حس هدفمند داشته باشد.",
+        title: "طراحی رابط",
+        text: "چیدمان، تایپ و رنگ را طوری می‌چینم که محصول واضح و هدفمند باشد.",
       },
       {
         num: "۰۳",
-        title: "ساخت و صیقل",
-        text: "پیاده‌سازی React با چیدمان واکنش‌گرا و جزئیات سینمایی.",
+        title: "پیاده‌سازی فرانت‌اند",
+        text: "با React می‌سازم — واکنش‌گرا، سریع و با جزئیات دقیق.",
       },
       {
         num: "۰۴",
-        title: "تحویل و پشتیبانی",
-        text: "دیپلوی، مستندسازی و تکرار بر اساس بازخورد واقعی.",
+        title: "انتشار و پشتیبانی",
+        text: "دیپلوی می‌کنم، مستندات می‌دهم و با بازخورد واقعی بهبود می‌دهم.",
       },
     ],
   },
@@ -387,22 +387,22 @@ export const process = {
 
 export const cta = {
   en: {
-    title: "Have a project in mind?",
-    body: "Let's build a website that feels inevitable — modern, memorable, and ready for the next hire conversation.",
-    button: "Start a conversation",
+    title: "Ready to start a project?",
+    body: "Tell me about your idea — I’ll help turn it into a modern, clean website.",
+    button: "Get in touch",
   },
   fa: {
-    title: "ایده‌ای برای پروژه دارید؟",
-    body: "بیایید سایتی بسازیم که اجتناب‌ناپذیر به نظر برسد — مدرن، به‌یادماندنی و آماده گفتگوی استخدام.",
-    button: "شروع گفتگو",
+    title: "آماده شروع پروژه هستید؟",
+    body: "ایده‌تان را بگویید — کمک می‌کنم به یک وب‌سایت مدرن و تمیز تبدیل شود.",
+    button: "پیام بدهید",
   },
 };
 
 export const contact = {
   en: {
     eyebrow: "Contact",
-    title: "Let's discuss your project.",
-    body: "Send a message and it lands in my inbox. Prefer social? I'm active on the channels below.",
+    title: "Send a message.",
+    body: "Fill the form and I’ll receive it in my inbox. You can also reach me on social links below.",
     fields: {
       name: "Name",
       email: "Email",
@@ -419,8 +419,8 @@ export const contact = {
   },
   fa: {
     eyebrow: "تماس",
-    title: "بیایید درباره پروژه‌تان حرف بزنیم.",
-    body: "پیام بفرستید تا مستقیم به اینباکس من برسد. ترجیح شبکه اجتماعی؟ کانال‌های زیر فعال‌اند.",
+    title: "پیام بفرستید.",
+    body: "فرم را پر کنید تا مستقیم به ایمیل من برسد. از شبکه‌های اجتماعی پایین هم در دسترس هستید.",
     fields: {
       name: "نام",
       email: "ایمیل",
@@ -462,9 +462,9 @@ export const contact = {
 
 export const footer = {
   en: {
-    rights: "Crafted with cinematic intent.",
+    rights: "Built with care in Mashhad.",
   },
   fa: {
-    rights: "ساخته‌شده با نیت سینمایی.",
+    rights: "ساخته‌شده با دقت در مشهد.",
   },
 };

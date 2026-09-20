@@ -45,8 +45,9 @@ export default function Hero() {
               </filter>
             </defs>
             <text
-              x="24"
+              x="490"
               y="112"
+              textAnchor="middle"
               fill="url(#brandGrad)"
               filter="url(#brandGlow)"
               fontFamily="Syne, IranYekan, sans-serif"
