@@ -11,6 +11,7 @@ import stdDashImg from "../assets/Std-Dshboard-v1.jpg";
 import dashAdminImg from "../assets/Dashboard-Admin-Panel-v-03.jpg";
 import hurapanelImg from "../assets/Hurapanel-Menu.jpg";
 import swimmingImg from "../assets/Iran-Australia-Swimming.jpg";
+import telvixImg from "../assets/Telvix-Bot.jpg";
 
 export const brand = {
   name: "Baradaran",
@@ -186,6 +187,19 @@ export const projects = {
     viewLive: "نسخه آنلاین",
   },
   items: [
+    {
+      id: "telvix",
+      title: { en: "Telvix Bot", fa: "ربات تل‌ویکس" },
+      description: {
+        en: "Telegram bot with a modern branded experience — available live on Telegram.",
+        fa: "ربات تلگرام با تجربه برندینگ مدرن — نسخه آنلاین در تلگرام.",
+      },
+      stack: ["Telegram Bot", "JavaScript"],
+      image: telvixImg,
+      github: null,
+      live: "https://t.me/Telvixbot",
+      category: "bot",
+    },
     {
       id: "hurapanel",
       title: { en: "Hurapanel Online Menu", fa: "منوی آنلاین هورا پنل" },

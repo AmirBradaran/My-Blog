@@ -1,7 +1,7 @@
 import Reveal from "../Reveal";
 import { useLanguage } from "../../Utils/LanguageContext";
 import { about, brand } from "../../data/content";
-import portrait from "../../assets/Me-(2).png";
+import portrait from "../../assets/Me-Portrait.jpg";
 import "./About.css";
 
 export default function About() {
