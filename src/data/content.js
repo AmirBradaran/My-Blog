@@ -9,6 +9,8 @@ import adminPanelImg from "../assets/Desktop-Dashboard-Admin-Panel-v3.png";
 import buySellImg from "../assets/Buy-and-sell-table-1.jpg";
 import stdDashImg from "../assets/Std-Dshboard-v1.jpg";
 import dashAdminImg from "../assets/Dashboard-Admin-Panel-v-03.jpg";
+import hurapanelImg from "../assets/Hurapanel-Menu.jpg";
+import swimmingImg from "../assets/Iran-Australia-Swimming.jpg";
 
 export const brand = {
   name: "Baradaran",
@@ -184,6 +186,35 @@ export const projects = {
     viewLive: "نسخه آنلاین",
   },
   items: [
+    {
+      id: "hurapanel",
+      title: { en: "Hurapanel Online Menu", fa: "منوی آنلاین هورا پنل" },
+      description: {
+        en: "Dark-themed online cafe menu with category filtering, shopping cart, and full RTL support.",
+        fa: "منوی آنلاین کافه با تم تیره، فیلتر دسته‌بندی، سبد خرید و پشتیبانی کامل راست‌چین.",
+      },
+      stack: ["React", "JavaScript", "RTL"],
+      image: hurapanelImg,
+      github: null,
+      live: "https://client-hurapanel.vercel.app/",
+      category: "commerce",
+    },
+    {
+      id: "iran-australia-swimming",
+      title: {
+        en: "Iran Australia Swimming Academy",
+        fa: "مدرسه شنا ایران استرالیا",
+      },
+      description: {
+        en: "Professional bilingual landing page for a swimming academy — courses, gallery, and modern RTL UI.",
+        fa: "لندینگ حرفه‌ای دو زبانه برای مدرسه شنا — دوره‌ها، گالری و رابط کاربری مدرن راست‌چین.",
+      },
+      stack: ["React", "JavaScript", "RTL"],
+      image: swimmingImg,
+      github: null,
+      live: "https://iranaustraliaswimming.ir/",
+      category: "marketing",
+    },
     {
       id: "digital-shop",
       title: { en: "Digital Shop", fa: "دیجیتال شاپ" },
